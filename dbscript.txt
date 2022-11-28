@@ -1,0 +1,63 @@
+CREATE TABLE `ELANECustomer` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `mobile_number` varchar(255) DEFAULT NULL,
+   `address` varchar(255) DEFAULT NULL,
+  `isActive` varchar(255) DEFAULT NULL,
+  `isApproved` varchar(255) DEFAULT NULL,
+  `CreatedBy` int(11) DEFAULT NULL,
+  `CreatedDate` date DEFAULT NULL,
+  `ModifiedBy` int(11) DEFAULT NULL,
+  `ModifiedDate` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `ELANEMenuItem` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `item_name` varchar(255) DEFAULT NULL,
+  `price` float(255,30) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `isActive` varchar(255) DEFAULT NULL,
+  `isApproved` varchar(255) DEFAULT NULL,
+  `CreatedBy` int(11) DEFAULT NULL,
+  `CreatedDate` date DEFAULT NULL,
+  `ModifiedBy` int(11) DEFAULT NULL,
+  `ModifiedDate` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+ CREATE TABLE `ELANEORders` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `status` varchar(255) DEFAULT NULL,
+  `queue_position` float(255,30) DEFAULT NULL,
+  `customer_id` varchar(255) DEFAULT NULL,
+  `menu_item_id`  int(11) DEFAULT NULL,
+  `queue_id`  int(11) DEFAULT NULL,
+  `isActive` varchar(255) DEFAULT NULL,
+  `isApproved` varchar(255) DEFAULT NULL,
+  `CreatedBy` int(11) DEFAULT NULL,
+  `CreatedDate` date DEFAULT NULL,
+  `ModifiedBy` int(11) DEFAULT NULL,
+  `ModifiedDate` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ CREATE TABLE `ELANEQueue` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+   `size`  int(11) DEFAULT NULL,
+    `shopid`  int(11) DEFAULT NULL,
+  `isActive` varchar(255) DEFAULT NULL,
+  `isApproved` varchar(255) DEFAULT NULL,
+  `CreatedBy` int(11) DEFAULT NULL,
+  `CreatedDate` date DEFAULT NULL,
+  `ModifiedBy` int(11) DEFAULT NULL,
+  `ModifiedDate` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+ 
+ 
